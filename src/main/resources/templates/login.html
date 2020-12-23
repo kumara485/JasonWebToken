@@ -1,0 +1,71 @@
+ <!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>login</title>
+	<style type="text/css">
+
+	
+	
+	</style>
+</head>
+<body>
+	 <form action="/login" method="post">
+    <div class="form-group">
+      <label for="username">USERNAME:</label>
+      <input type="text" class="form-control"  placeholder="Enter Username" name="username">
+    </div>
+    <div class="form-group">
+      <label for="pwd">PASSWORD:</label>
+      <input type="password" class="form-control"  placeholder="Enter password" name="password">
+    </div>
+     <div class="form-group">
+      <label for="remember-me">REMEMBER ME:</label>
+      <input type="checkbox" name="remember-me" />
+    </div>
+     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</body>
+</html> 
+
+<!-- <!doctype html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+<link th:href="@{/css/bootstrap.css}" rel="stylesheet"/>
+<script type="text/javascript" th:src="@{/js/bootstrap.js}"></script>
+    <title>Signin Template for Bootstrap</title>
+
+    
+
+    Bootstrap core CSS
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    Custom styles for this template
+    <link th:href="@{/css/signin.css}" rel="stylesheet">
+  </head>
+
+  <body class="text-center">
+    <form class="form-signin" action="/login" method="post">
+      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+      <label for="inputtext" class="sr-only">USERNAME</label>
+      <input type="text" id="inputtext" class="form-control" placeholder="Username" required autofocus>
+      <label for="inputPassword" class="sr-only">PASSWORD</label>
+      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2020-2070</p>
+    </form>
+  </body>
+</html>
+ -->
